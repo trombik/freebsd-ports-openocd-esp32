@@ -1,0 +1,7 @@
+TIMESTAMP = 1600493812
+SHA256 (espressif-openocd-esp32-20200709-v0.10.0-esp32-20200709_GH0.tar.gz) = 559cfc2d8ab6f57da41f11a1c083ae2ad125421c4f76fde585aeb7e67ecf8a0f
+SIZE (espressif-openocd-esp32-20200709-v0.10.0-esp32-20200709_GH0.tar.gz) = 2848330
+SHA256 (msteveb-jimtcl-0.77_GH0.tar.gz) = 0874c50ab932c68940c29c48c014266a322c54ff357a0919386f32cc341eb3b2
+SIZE (msteveb-jimtcl-0.77_GH0.tar.gz) = 2925776
+SHA256 (syntacore-libjaylink-835e45b_GH0.tar.gz) = 608e1be62d023de88774d78e1250c15f118df505ee40f596d9cbe0feca9e6d3d
+SIZE (syntacore-libjaylink-835e45b_GH0.tar.gz) = 71956
