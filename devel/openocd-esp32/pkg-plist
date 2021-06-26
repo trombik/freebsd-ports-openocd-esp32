@@ -750,3 +750,4 @@ man/man1/openocd-esp32.1.gz
 %%DATADIR%%/scripts/test/syntax1.cfg
 %%DATADIR%%/scripts/tools/firmware-recovery.tcl
 %%DATADIR%%/scripts/tools/memtest.tcl
+%%DOCSDIR}%%/espressif.md

@@ -1,5 +1,3 @@
-# $FreeBSD:$
-
 PORTNAME=	openocd-esp32
 PORTVERSION=	20210401
 CATEGORIES=	devel
@@ -36,5 +34,7 @@ post-install:
 .for F in info info-1 info-2
 	${MV} ${STAGEDIR}${PREFIX}/share/info/openocd.${F} ${STAGEDIR}${PREFIX}/share/info/openocd-esp32.${F}
 .endfor
+	${MKDIR} ${STAGEDIR}${DOCSDIR}
+	${INSTALL_DATA} ${WRKSRC}/espressif.md ${STAGEDIR}${DOCSDIR}/
 
 .include <bsd.port.mk>
