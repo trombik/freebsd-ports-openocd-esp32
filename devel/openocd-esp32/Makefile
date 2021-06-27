@@ -12,7 +12,7 @@ LIB_DEPENDS=		libftdi.so:devel/libftdi
 USES=		gmake libtool makeinfo pkgconfig autoreconf
 USE_GITHUB=	yes
 GH_TUPLE=	espressif:openocd-esp32:v0.10.0-esp32-${PORTVERSION} \
-	msteveb:jimtcl:0.77:jimtcl/jimtcl \
+	msteveb:jimtcl:${OCDESP_JIMTCL_GITREF}:jimtcl/jimtcl \
 	syntacore:libjaylink:835e45b:libjaylink/src/jtag/drivers/libjaylink
 
 GNU_CONFIGURE=	yes
@@ -25,6 +25,8 @@ CONFIGURE_ARGS=	\
 				--enable-jlink \
 				--enable-ulink
 
+# submodule
+OCDESP_JIMTCL_GITREF=	0aa0fb4
 CFLAGS+=	-I${LOCALBASE}/include -L${LOCALBASE}/lib -Wno-error
 INFO=	openocd-esp32
 
