@@ -1,0 +1,8 @@
+[
+{ type: install
+  message: <<__EOM__
+The openocd has been installed as `openocd-esp32`. See %%DOCSDIR%%
+/espressif.md for specific notes.
+__EOM__
+}
+]
