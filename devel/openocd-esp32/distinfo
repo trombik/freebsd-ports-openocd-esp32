@@ -1,6 +1,6 @@
-TIMESTAMP = 1630140882
-SHA256 (espressif-openocd-esp32-20210721-v0.10.0-esp32-20210721_GH0.tar.gz) = 866a5e506b0129708d7c5244256e8665f5a2e346054776a28d42007a47e78af0
-SIZE (espressif-openocd-esp32-20210721-v0.10.0-esp32-20210721_GH0.tar.gz) = 2979580
+TIMESTAMP = 1641507250
+SHA256 (espressif-openocd-esp32-20211220-v0.11.0-esp32-20211220_GH0.tar.gz) = 350331aa5f4b2e0ca16dcdcc8d555715b5f801e6266ad8407fbd1d5b02eb1e75
+SIZE (espressif-openocd-esp32-20211220-v0.11.0-esp32-20211220_GH0.tar.gz) = 3241718
 SHA256 (msteveb-jimtcl-0aa0fb4_GH0.tar.gz) = cf378fc6037bc4a1606fe6e9e118327e4ab1e96613eb1654dc23686346d0e883
 SIZE (msteveb-jimtcl-0aa0fb4_GH0.tar.gz) = 3098070
 SHA256 (libjaylink-libjaylink-f73ad5e667ae8b26a52b847c603fdadaabf302a6_GL0.tar.gz) = e22a6f2c6d848eb5c047619f286a41473c0158dffaed65033276756dd00aeab3

@@ -1,5 +1,5 @@
 PORTNAME=	openocd-esp32
-PORTVERSION=	20210721
+PORTVERSION=	20211220
 CATEGORIES=	devel
 
 MAINTAINER=	y@trombik.org
@@ -12,9 +12,10 @@ LIB_DEPENDS=		libftdi.so:devel/libftdi
 USES=		gmake libtool makeinfo pkgconfig autoreconf
 USE_GITHUB=	yes
 USE_GITLAB=	yes
+OPENOCD_VERSION=	0.11.0
 GH_TUPLE=	\
 	msteveb:jimtcl:${OCDESP_JIMTCL_GITREF}:jimtcl_group/jimtcl \
-	espressif:openocd-esp32:v0.10.0-esp32-${PORTVERSION}
+	espressif:openocd-esp32:v${OPENOCD_VERSION}-esp32-${PORTVERSION}
 
 # XXX undocumented feature, `nodefault`, in bsd.sites.mk
 USE_GITLAB=	nodefault
