@@ -2,9 +2,9 @@
 { type: install
   message: <<EOM
 This port is espressif version of OpenOCD. Please use devel/openocd for boards
-other than ESP32 family. The binary, `openocd` is renamed as `openocd-esp32`
-to avoid conflict with `devel/openocd`. Run `openocd-esp32` instead of
-`openocd`.
+other than ESP32 family. The binary, `openocd`, has been installed under
+`${PREFIX}/openocd-esp32/bin` (`/usr/local/openocd-esp32/bin` in most cases).
+Make sure to add the path to your PATH environment variable.
 
 OpenOCD is now installed, this software can damage your hardware, enjoy!
 

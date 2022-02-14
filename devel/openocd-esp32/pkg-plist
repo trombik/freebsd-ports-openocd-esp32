@@ -1,5 +1,5 @@
-bin/openocd-esp32
-man/man1/openocd-esp32.1.gz
+bin/openocd
+man/man1/openocd.1.gz
 %%DATADIR%%/OpenULINK/ulink_firmware.hex
 %%DATADIR%%/contrib/60-openocd.rules
 %%DATADIR%%/contrib/libdcc/README
