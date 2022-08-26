@@ -3,7 +3,7 @@
 @@ -1,5 +1,5 @@
  AC_PREREQ(2.64)
 -AC_INIT([openocd], [ ],
-+AC_INIT([openocd-esp32], [ ],
++AC_INIT([openocd-esp32], [v%%OPENOCD_VERSION%%],
    [OpenOCD Mailing List <openocd-devel@lists.sourceforge.net>])
  AC_CONFIG_SRCDIR([src/openocd.c])
  

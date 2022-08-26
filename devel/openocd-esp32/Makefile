@@ -1,5 +1,5 @@
 PORTNAME=	openocd-esp32
-PORTVERSION=	20211220
+PORTVERSION=	20220706
 CATEGORIES=	devel
 
 MAINTAINER=	y@trombik.org
@@ -7,9 +7,9 @@ COMMENT=	Open On-Chip Debugger for ESP32
 
 LICENSE=	GPLv2
 
-LIB_DEPENDS=		libftdi.so:devel/libftdi
+LIB_DEPENDS=		libftdi1.so:devel/libftdi1
 
-USES=		gmake libtool makeinfo pkgconfig autoreconf
+USES=		gmake libtool makeinfo pkgconfig autoreconf:build
 USE_GITHUB=	yes
 USE_GITLAB=	yes
 OPENOCD_VERSION=	0.11.0
@@ -30,13 +30,19 @@ OCDESP_CONFIGURE_ARGS=	\
 CONFIGURE_ARGS=	\
 				${OCDESP_CONFIGURE_ARGS} \
 				--disable-werror
-OCDESP_JIMTCL_GITREF=	0aa0fb4
+OCDESP_JIMTCL_GITREF=	a77ef1a
 # XXX commit ref in GL_TUPLE must be full ref, not short one
 OCDESP_LIBJAYLINK_GITREF=	f73ad5e667ae8b26a52b847c603fdadaabf302a6
 CFLAGS+=	-I${LOCALBASE}/include -L${LOCALBASE}/lib -Wno-error
 INFO=	openocd-esp32
 SUB_FILES=	pkg-message
 SUB_LIST=	DOCSDIR=${DOCSDIR}
+
+pre-configure:
+	${REINPLACE_CMD} \
+		-e 's|%%OPENOCD_VERSION%%|${OPENOCD_VERSION}|g' \
+		${WRKSRC}/configure.ac
+	(cd ${WRKSRC} && sh ./bootstrap)
 
 post-install:
 .for F in info info-1 info-2
