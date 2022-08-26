@@ -42,7 +42,7 @@ pre-configure:
 	${REINPLACE_CMD} \
 		-e 's|%%OPENOCD_VERSION%%|${OPENOCD_VERSION}|g' \
 		${WRKSRC}/configure.ac
-	(cd ${WRKSRC} && ${ENV} SKIP_SUBMODULE=y ${SH} ./bootstrap)
+	(cd ${WRKSRC} && ${SETENV} SKIP_SUBMODULE=y ${SH} ./bootstrap)
 
 post-install:
 .for F in info info-1 info-2
