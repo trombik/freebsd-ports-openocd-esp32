@@ -4,6 +4,7 @@ CATEGORIES=	devel
 
 MAINTAINER=	y@trombik.org
 COMMENT=	Open On-Chip Debugger for ESP32
+WWW=	https://github.com/espressif/openocd-esp32
 
 LICENSE=	GPLv2
 
