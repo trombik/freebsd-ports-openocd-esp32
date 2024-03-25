@@ -1,5 +1,5 @@
 PORTNAME=	openocd-esp32
-PORTVERSION=	20220706
+PORTVERSION=	20240318
 CATEGORIES=	devel
 
 MAINTAINER=	y@trombik.org
@@ -12,7 +12,12 @@ LIB_DEPENDS=		libftdi1.so:devel/libftdi1
 USES=		gmake libtool makeinfo pkgconfig autoreconf:build
 USE_GITHUB=	yes
 USE_GITLAB=	yes
-OPENOCD_VERSION=	0.11.0
+
+OPENOCD_VERSION=	0.12.0
+OCDESP_JIMTCL_GITREF=	1933e54
+
+# XXX commit ref in GL_TUPLE must be full ref, not short one
+OCDESP_LIBJAYLINK_GITREF=	f73ad5e667ae8b26a52b847c603fdadaabf302a6
 GH_TUPLE=	\
 	msteveb:jimtcl:${OCDESP_JIMTCL_GITREF}:jimtcl_group/jimtcl \
 	espressif:openocd-esp32:v${OPENOCD_VERSION}-esp32-${PORTVERSION}
@@ -30,9 +35,6 @@ OCDESP_CONFIGURE_ARGS=	\
 CONFIGURE_ARGS=	\
 				${OCDESP_CONFIGURE_ARGS} \
 				--disable-werror
-OCDESP_JIMTCL_GITREF=	a77ef1a
-# XXX commit ref in GL_TUPLE must be full ref, not short one
-OCDESP_LIBJAYLINK_GITREF=	f73ad5e667ae8b26a52b847c603fdadaabf302a6
 CFLAGS+=	-I${LOCALBASE}/include -L${LOCALBASE}/lib -Wno-error
 INFO=	openocd-esp32
 SUB_FILES=	pkg-message

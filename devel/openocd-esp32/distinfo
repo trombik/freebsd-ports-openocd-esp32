@@ -1,7 +1,7 @@
-TIMESTAMP = 1661510487
-SHA256 (espressif-openocd-esp32-20220706-v0.11.0-esp32-20220706_GH0.tar.gz) = cd7c10f7da718cfb122aa3cc75e09b6eb17d18a89b8295dc62ba5c0031cf4139
-SIZE (espressif-openocd-esp32-20220706-v0.11.0-esp32-20220706_GH0.tar.gz) = 3427425
-SHA256 (msteveb-jimtcl-a77ef1a_GH0.tar.gz) = 4144fa906e390dcdc79acd9c15fb0fa790cd83a36765639785f16cc1b063c777
-SIZE (msteveb-jimtcl-a77ef1a_GH0.tar.gz) = 3977522
+TIMESTAMP = 1711365783
+SHA256 (espressif-openocd-esp32-20240318-v0.12.0-esp32-20240318_GH0.tar.gz) = 560044f2da1456010a105f28c9ff3939a8c2f5512c7e4cb7502f458374b07d60
+SIZE (espressif-openocd-esp32-20240318-v0.12.0-esp32-20240318_GH0.tar.gz) = 3825296
+SHA256 (msteveb-jimtcl-1933e54_GH0.tar.gz) = 956424151f44f1372ecda96067996a1b2347a64c41ba7d66fbe9814c61260d4f
+SIZE (msteveb-jimtcl-1933e54_GH0.tar.gz) = 4435282
 SHA256 (libjaylink-libjaylink-f73ad5e667ae8b26a52b847c603fdadaabf302a6_GL0.tar.gz) = e22a6f2c6d848eb5c047619f286a41473c0158dffaed65033276756dd00aeab3
 SIZE (libjaylink-libjaylink-f73ad5e667ae8b26a52b847c603fdadaabf302a6_GL0.tar.gz) = 72014
