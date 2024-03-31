@@ -10,7 +10,7 @@ jobs:
       # see supported releases at:
       # https://github.com/vmactions/freebsd-vm/tree/main/conf
       freebsd_versions: "14.0"
-      freebsd_ports_ref: quarterly
+      freebsd_ports_ref: 2024Q1
 
   portlint:
     uses: trombik/freebsd-ports-actions/.github/workflows/portlint.yml@main
