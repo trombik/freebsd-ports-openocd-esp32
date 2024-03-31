@@ -42,9 +42,6 @@ SUB_FILES=	pkg-message
 SUB_LIST=	DOCSDIR=${DOCSDIR}
 
 pre-configure:
-	${REINPLACE_CMD} \
-		-e 's|%%OPENOCD_VERSION%%|${OPENOCD_VERSION}|g' \
-		${WRKSRC}/configure.ac
 	(cd ${WRKSRC} && ${SETENV} SKIP_SUBMODULE=y ${SH} ./bootstrap)
 
 post-install:
