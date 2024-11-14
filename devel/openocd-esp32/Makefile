@@ -7,7 +7,8 @@ COMMENT=	Open On-Chip Debugger for ESP32
 
 LICENSE=	GPLv2
 
-LIB_DEPENDS=		libftdi1.so:devel/libftdi1
+LIB_DEPENDS=	libftdi1.so:devel/libftdi1 \
+	libhidapi.so:comms/hidapi
 
 USES=		gmake libtool makeinfo pkgconfig autoreconf:build
 USE_GITHUB=	yes
