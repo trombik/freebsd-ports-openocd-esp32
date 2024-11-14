@@ -23,7 +23,7 @@ USE_GITLAB=	nodefault
 GL_TUPLE=	https://gitlab.zapb.de:libjaylink:libjaylink:${OCDESP_LIBJAYLINK_GITREF}:libjaylink/src/jtag/drivers/libjaylink
 GNU_CONFIGURE=	yes
 # use ${LOCALBASE}/${PORTNAME} as PREFIX like xtensa-esp32-elf.
-PREFIX=	${LOCALBASE}/${PORTNAME}
+GNU_CONFIGURE_PREFIX=	${LOCALBASE}/${PORTNAME}
 
 # see https://github.com/espressif/openocd-esp32/blob/master/.gitlab-ci.yml
 OCDESP_CONFIGURE_ARGS=	\
@@ -52,9 +52,10 @@ pre-configure:
 
 post-install:
 .for F in info info-1 info-2
-	${MV} ${STAGEDIR}${PREFIX}/share/info/openocd.${F} ${STAGEDIR}${PREFIX}/share/info/openocd-esp32.${F}
+	${RM} ${STAGEDIR}${PREFIX}/share/info/openocd.${F}
 .endfor
 	${MKDIR} ${STAGEDIR}${DOCSDIR}
 	${INSTALL_DATA} ${WRKSRC}/espressif.md ${STAGEDIR}${DOCSDIR}/
+	${MV} ${STAGEDIR}${MANDIRS}/man1/openocd.1 ${STAGEDIR}${MANDIRS}/man1/${PORTNAME}.1
 
 .include <bsd.port.mk>
