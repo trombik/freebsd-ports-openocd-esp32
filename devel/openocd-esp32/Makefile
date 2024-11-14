@@ -26,7 +26,10 @@ PREFIX=	${LOCALBASE}/${PORTNAME}
 
 # see https://github.com/espressif/openocd-esp32/blob/master/.gitlab-ci.yml
 OCDESP_CONFIGURE_ARGS=	\
-	--disable-doxygen-html --disable-doxygen-pdf --enable-ftdi --enable-jlink --enable-ulink
+	--disable-doxygen-html \
+	--enable-remote-bitbang
+
+OCDESP_CONFIGURE_ARGS+=	--enable-internal-libjaylink
 CONFIGURE_ARGS=	\
 				${OCDESP_CONFIGURE_ARGS} \
 				--disable-werror
