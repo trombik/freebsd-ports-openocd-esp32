@@ -48,6 +48,9 @@ pre-configure:
 	${REINPLACE_CMD} \
 		-e 's|%%OPENOCD_VERSION%%|${OPENOCD_VERSION}|g' \
 		${WRKSRC}/configure.ac
+	${REINPLACE_CMD} \
+		-e 's|%%PORTVERSION%%|${PORTVERSION}|' \
+		${WRKSRC}/guess-rev.sh
 	(cd ${WRKSRC} && ${SETENV} SKIP_SUBMODULE=y ${SH} ./bootstrap)
 
 post-install:
