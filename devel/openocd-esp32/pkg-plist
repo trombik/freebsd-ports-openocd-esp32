@@ -1,8 +1,8 @@
 openocd-esp32/bin/openocd
-openocd-esp32/share/info/dir
 openocd-esp32/share/info/openocd.info
 openocd-esp32/share/info/openocd.info-1
 openocd-esp32/share/info/openocd.info-2
+openocd-esp32/share/info/openocd.info-3
 openocd-esp32/share/openocd/OpenULINK/ulink_firmware.hex
 openocd-esp32/share/openocd/angie/angie_bitstream.bit
 openocd-esp32/share/openocd/angie/angie_firmware.bin
@@ -18,6 +18,7 @@ openocd-esp32/share/openocd/espressif/stub_bins/esp32h2/stub_flash_idf_binary_co
 openocd-esp32/share/openocd/espressif/stub_bins/esp32h2/stub_flash_idf_binary_data.inc
 openocd-esp32/share/openocd/espressif/stub_bins/esp32h2/stub_flash_idf_image.h
 openocd-esp32/share/openocd/espressif/tools/esp_detect_config.py
+openocd-esp32/share/openocd/espressif/tools/esp_problems_hints.yml
 openocd-esp32/share/openocd/scripts/bitsbytes.tcl
 openocd-esp32/share/openocd/scripts/board/8devices-lima.cfg
 openocd-esp32/share/openocd/scripts/board/actux3.cfg
@@ -143,6 +144,9 @@ openocd-esp32/share/openocd/scripts/board/esp32c61-ftdi.cfg
 openocd-esp32/share/openocd/scripts/board/esp32h2-bridge.cfg
 openocd-esp32/share/openocd/scripts/board/esp32h2-builtin.cfg
 openocd-esp32/share/openocd/scripts/board/esp32h2-ftdi.cfg
+openocd-esp32/share/openocd/scripts/board/esp32h4-bridge.cfg
+openocd-esp32/share/openocd/scripts/board/esp32h4-builtin.cfg
+openocd-esp32/share/openocd/scripts/board/esp32h4-ftdi.cfg
 openocd-esp32/share/openocd/scripts/board/esp32p4-bridge.cfg
 openocd-esp32/share/openocd/scripts/board/esp32p4-builtin.cfg
 openocd-esp32/share/openocd/scripts/board/esp32p4-ftdi.cfg
@@ -223,9 +227,12 @@ openocd-esp32/share/openocd/scripts/board/nds32_corvettef1.cfg
 openocd-esp32/share/openocd/scripts/board/nds32_xc7.cfg
 openocd-esp32/share/openocd/scripts/board/netgear-dg834v3.cfg
 openocd-esp32/share/openocd/scripts/board/netgear-wg102.cfg
-openocd-esp32/share/openocd/scripts/board/nordic_nrf51822_mkit.cfg
-openocd-esp32/share/openocd/scripts/board/nordic_nrf51_dk.cfg
-openocd-esp32/share/openocd/scripts/board/nordic_nrf52_dk.cfg
+openocd-esp32/share/openocd/scripts/board/nordic/nrf51-dk.cfg
+openocd-esp32/share/openocd/scripts/board/nordic/nrf51822-mkit.cfg
+openocd-esp32/share/openocd/scripts/board/nordic/nrf52-dk.cfg
+openocd-esp32/share/openocd/scripts/board/nordic/nrf5340-dk.cfg
+openocd-esp32/share/openocd/scripts/board/nordic/nrf54l15-dk.cfg
+openocd-esp32/share/openocd/scripts/board/nordic/nrf9160-dk.cfg
 openocd-esp32/share/openocd/scripts/board/nordic_nrf52_ftx232.cfg
 openocd-esp32/share/openocd/scripts/board/novena-internal-fpga.cfg
 openocd-esp32/share/openocd/scripts/board/npcx_evb.cfg
@@ -253,6 +260,7 @@ openocd-esp32/share/openocd/scripts/board/olimex_stm32_p107.cfg
 openocd-esp32/share/openocd/scripts/board/omap2420_h4.cfg
 openocd-esp32/share/openocd/scripts/board/openrd.cfg
 openocd-esp32/share/openocd/scripts/board/or1k_generic.cfg
+openocd-esp32/share/openocd/scripts/board/orange_pi_zero_3.cfg
 openocd-esp32/share/openocd/scripts/board/osk5912.cfg
 openocd-esp32/share/openocd/scripts/board/phone_se_j100i.cfg
 openocd-esp32/share/openocd/scripts/board/phytec_lpc3250.cfg
@@ -299,9 +307,11 @@ openocd-esp32/share/openocd/scripts/board/spear310evb20.cfg
 openocd-esp32/share/openocd/scripts/board/spear310evb20_mod.cfg
 openocd-esp32/share/openocd/scripts/board/spear320cpu.cfg
 openocd-esp32/share/openocd/scripts/board/spear320cpu_mod.cfg
+openocd-esp32/share/openocd/scripts/board/st/nucleo-u083rc.cfg
 openocd-esp32/share/openocd/scripts/board/st_b-l475e-iot01a.cfg
 openocd-esp32/share/openocd/scripts/board/st_nucleo_8l152r8.cfg
 openocd-esp32/share/openocd/scripts/board/st_nucleo_8s208rb.cfg
+openocd-esp32/share/openocd/scripts/board/st_nucleo_c0.cfg
 openocd-esp32/share/openocd/scripts/board/st_nucleo_f0.cfg
 openocd-esp32/share/openocd/scripts/board/st_nucleo_f103rb.cfg
 openocd-esp32/share/openocd/scripts/board/st_nucleo_f3.cfg
@@ -370,8 +380,11 @@ openocd-esp32/share/openocd/scripts/board/stm32mp15x_dk2.cfg
 openocd-esp32/share/openocd/scripts/board/stm32vldiscovery.cfg
 openocd-esp32/share/openocd/scripts/board/str910-eval.cfg
 openocd-esp32/share/openocd/scripts/board/telo.cfg
+openocd-esp32/share/openocd/scripts/board/ti/launchxl2-tms57012.cfg
 openocd-esp32/share/openocd/scripts/board/ti_am243_launchpad.cfg
+openocd-esp32/share/openocd/scripts/board/ti_am261_launchpad.cfg
 openocd-esp32/share/openocd/scripts/board/ti_am263_launchpad.cfg
+openocd-esp32/share/openocd/scripts/board/ti_am263p_launchpad.cfg
 openocd-esp32/share/openocd/scripts/board/ti_am273_launchpad.cfg
 openocd-esp32/share/openocd/scripts/board/ti_am335xevm.cfg
 openocd-esp32/share/openocd/scripts/board/ti_am437x_idk.cfg
@@ -380,6 +393,7 @@ openocd-esp32/share/openocd/scripts/board/ti_am625_swd_native.cfg
 openocd-esp32/share/openocd/scripts/board/ti_am625evm.cfg
 openocd-esp32/share/openocd/scripts/board/ti_am62a7_swd_native.cfg
 openocd-esp32/share/openocd/scripts/board/ti_am62a7evm.cfg
+openocd-esp32/share/openocd/scripts/board/ti_am62levm.cfg
 openocd-esp32/share/openocd/scripts/board/ti_am62p_swd_native.cfg
 openocd-esp32/share/openocd/scripts/board/ti_am62pevm.cfg
 openocd-esp32/share/openocd/scripts/board/ti_am642evm.cfg
@@ -409,6 +423,7 @@ openocd-esp32/share/openocd/scripts/board/ti_j722s_swd_native.cfg
 openocd-esp32/share/openocd/scripts/board/ti_j722sevm.cfg
 openocd-esp32/share/openocd/scripts/board/ti_j784s4evm.cfg
 openocd-esp32/share/openocd/scripts/board/ti_msp432_launchpad.cfg
+openocd-esp32/share/openocd/scripts/board/ti_mspm0_launchpad.cfg
 openocd-esp32/share/openocd/scripts/board/ti_pandaboard.cfg
 openocd-esp32/share/openocd/scripts/board/ti_pandaboard_es.cfg
 openocd-esp32/share/openocd/scripts/board/ti_tmdx570ls20susb.cfg
@@ -517,6 +532,7 @@ openocd-esp32/share/openocd/scripts/cpu/arm/arm946.tcl
 openocd-esp32/share/openocd/scripts/cpu/arm/arm966.tcl
 openocd-esp32/share/openocd/scripts/cpu/arm/cortex_m3.tcl
 openocd-esp32/share/openocd/scripts/esp-config.json
+openocd-esp32/share/openocd/scripts/file_renaming.cfg
 openocd-esp32/share/openocd/scripts/fpga/altera-10m50.cfg
 openocd-esp32/share/openocd/scripts/fpga/altera-arriaii.cfg
 openocd-esp32/share/openocd/scripts/fpga/altera-cyclone10.cfg
@@ -573,9 +589,8 @@ openocd-esp32/share/openocd/scripts/interface/ftdi/digilent_jtag_smt2_nc.cfg
 openocd-esp32/share/openocd/scripts/interface/ftdi/dlp-usb1232h.cfg
 openocd-esp32/share/openocd/scripts/interface/ftdi/dp_busblaster.cfg
 openocd-esp32/share/openocd/scripts/interface/ftdi/dp_busblaster_kt-link.cfg
-openocd-esp32/share/openocd/scripts/interface/ftdi/esp32_devkitj_v1.cfg
-openocd-esp32/share/openocd/scripts/interface/ftdi/esp32p4_ftdi.cfg
 openocd-esp32/share/openocd/scripts/interface/ftdi/esp32s2_kaluga_v1.cfg
+openocd-esp32/share/openocd/scripts/interface/ftdi/esp_ftdi.cfg
 openocd-esp32/share/openocd/scripts/interface/ftdi/flossjtag-noeeprom.cfg
 openocd-esp32/share/openocd/scripts/interface/ftdi/flossjtag.cfg
 openocd-esp32/share/openocd/scripts/interface/ftdi/flyswatter.cfg
@@ -660,6 +675,8 @@ openocd-esp32/share/openocd/scripts/interface/opendous.cfg
 openocd-esp32/share/openocd/scripts/interface/openjtag.cfg
 openocd-esp32/share/openocd/scripts/interface/osbdm.cfg
 openocd-esp32/share/openocd/scripts/interface/parport.cfg
+openocd-esp32/share/openocd/scripts/interface/parport/dlc5.cfg
+openocd-esp32/share/openocd/scripts/interface/parport/wiggler.cfg
 openocd-esp32/share/openocd/scripts/interface/parport_dlc5.cfg
 openocd-esp32/share/openocd/scripts/interface/raspberrypi-gpio-connector.cfg
 openocd-esp32/share/openocd/scripts/interface/raspberrypi-native.cfg
@@ -667,7 +684,9 @@ openocd-esp32/share/openocd/scripts/interface/raspberrypi2-native.cfg
 openocd-esp32/share/openocd/scripts/interface/raspberrypi5-gpiod.cfg
 openocd-esp32/share/openocd/scripts/interface/rlink.cfg
 openocd-esp32/share/openocd/scripts/interface/rshim.cfg
+openocd-esp32/share/openocd/scripts/interface/spidev_example.cfg
 openocd-esp32/share/openocd/scripts/interface/stlink-dap.cfg
+openocd-esp32/share/openocd/scripts/interface/stlink-hla.cfg
 openocd-esp32/share/openocd/scripts/interface/stlink-v1.cfg
 openocd-esp32/share/openocd/scripts/interface/stlink-v2-1.cfg
 openocd-esp32/share/openocd/scripts/interface/stlink-v2.cfg
@@ -687,6 +706,7 @@ openocd-esp32/share/openocd/scripts/target/1986ве1т.cfg
 openocd-esp32/share/openocd/scripts/target/adsp-sc58x.cfg
 openocd-esp32/share/openocd/scripts/target/aduc702x.cfg
 openocd-esp32/share/openocd/scripts/target/aducm360.cfg
+openocd-esp32/share/openocd/scripts/target/allwinner_h618.cfg
 openocd-esp32/share/openocd/scripts/target/allwinner_v3s.cfg
 openocd-esp32/share/openocd/scripts/target/alphascale_asm9260t.cfg
 openocd-esp32/share/openocd/scripts/target/altera_fpgasoc.cfg
@@ -759,7 +779,10 @@ openocd-esp32/share/openocd/scripts/target/bcm4718.cfg
 openocd-esp32/share/openocd/scripts/target/bcm47xx.cfg
 openocd-esp32/share/openocd/scripts/target/bcm5352e.cfg
 openocd-esp32/share/openocd/scripts/target/bcm6348.cfg
+openocd-esp32/share/openocd/scripts/target/bl602.cfg
+openocd-esp32/share/openocd/scripts/target/bl602_common.cfg
 openocd-esp32/share/openocd/scripts/target/bl702.cfg
+openocd-esp32/share/openocd/scripts/target/bl702l.cfg
 openocd-esp32/share/openocd/scripts/target/bluefield.cfg
 openocd-esp32/share/openocd/scripts/target/bluenrg-x.cfg
 openocd-esp32/share/openocd/scripts/target/c100.cfg
@@ -789,6 +812,7 @@ openocd-esp32/share/openocd/scripts/target/esp32c6-lpcore.cfg
 openocd-esp32/share/openocd/scripts/target/esp32c6.cfg
 openocd-esp32/share/openocd/scripts/target/esp32c61.cfg
 openocd-esp32/share/openocd/scripts/target/esp32h2.cfg
+openocd-esp32/share/openocd/scripts/target/esp32h4.cfg
 openocd-esp32/share/openocd/scripts/target/esp32p4.cfg
 openocd-esp32/share/openocd/scripts/target/esp32s2.cfg
 openocd-esp32/share/openocd/scripts/target/esp32s3.cfg
@@ -890,12 +914,13 @@ openocd-esp32/share/openocd/scripts/target/netl_xlp316.cfg
 openocd-esp32/share/openocd/scripts/target/netl_xlp3xx.cfg
 openocd-esp32/share/openocd/scripts/target/ngultra.cfg
 openocd-esp32/share/openocd/scripts/target/nhs31xx.cfg
+openocd-esp32/share/openocd/scripts/target/nordic/common.cfg
+openocd-esp32/share/openocd/scripts/target/nordic/nrf51.cfg
+openocd-esp32/share/openocd/scripts/target/nordic/nrf52.cfg
+openocd-esp32/share/openocd/scripts/target/nordic/nrf53.cfg
+openocd-esp32/share/openocd/scripts/target/nordic/nrf54l.cfg
+openocd-esp32/share/openocd/scripts/target/nordic/nrf91.cfg
 openocd-esp32/share/openocd/scripts/target/npcx.cfg
-openocd-esp32/share/openocd/scripts/target/nrf51.cfg
-openocd-esp32/share/openocd/scripts/target/nrf52.cfg
-openocd-esp32/share/openocd/scripts/target/nrf53.cfg
-openocd-esp32/share/openocd/scripts/target/nrf91.cfg
-openocd-esp32/share/openocd/scripts/target/nrf_common.cfg
 openocd-esp32/share/openocd/scripts/target/nuc910.cfg
 openocd-esp32/share/openocd/scripts/target/numicro.cfg
 openocd-esp32/share/openocd/scripts/target/numicro_m4.cfg
@@ -922,12 +947,13 @@ openocd-esp32/share/openocd/scripts/target/renesas_r7s72100.cfg
 openocd-esp32/share/openocd/scripts/target/renesas_rcar_gen2.cfg
 openocd-esp32/share/openocd/scripts/target/renesas_rcar_gen3.cfg
 openocd-esp32/share/openocd/scripts/target/renesas_rcar_reset_common.cfg
+openocd-esp32/share/openocd/scripts/target/renesas_rz.cfg
 openocd-esp32/share/openocd/scripts/target/renesas_rz_five.cfg
-openocd-esp32/share/openocd/scripts/target/renesas_rz_g2.cfg
 openocd-esp32/share/openocd/scripts/target/renesas_s7g2.cfg
 openocd-esp32/share/openocd/scripts/target/rk3308.cfg
 openocd-esp32/share/openocd/scripts/target/rk3399.cfg
 openocd-esp32/share/openocd/scripts/target/rp2040.cfg
+openocd-esp32/share/openocd/scripts/target/rp2350.cfg
 openocd-esp32/share/openocd/scripts/target/rsl10.cfg
 openocd-esp32/share/openocd/scripts/target/rtl872xd.cfg
 openocd-esp32/share/openocd/scripts/target/s32k.cfg
@@ -964,6 +990,7 @@ openocd-esp32/share/openocd/scripts/target/stm32l4x.cfg
 openocd-esp32/share/openocd/scripts/target/stm32l5x.cfg
 openocd-esp32/share/openocd/scripts/target/stm32mp13x.cfg
 openocd-esp32/share/openocd/scripts/target/stm32mp15x.cfg
+openocd-esp32/share/openocd/scripts/target/stm32u0x.cfg
 openocd-esp32/share/openocd/scripts/target/stm32u5x.cfg
 openocd-esp32/share/openocd/scripts/target/stm32w108xx.cfg
 openocd-esp32/share/openocd/scripts/target/stm32wbax.cfg
@@ -1005,9 +1032,11 @@ openocd-esp32/share/openocd/scripts/target/ti_dm365.cfg
 openocd-esp32/share/openocd/scripts/target/ti_dm6446.cfg
 openocd-esp32/share/openocd/scripts/target/ti_k3.cfg
 openocd-esp32/share/openocd/scripts/target/ti_msp432.cfg
+openocd-esp32/share/openocd/scripts/target/ti_mspm0.cfg
 openocd-esp32/share/openocd/scripts/target/ti_rm4x.cfg
 openocd-esp32/share/openocd/scripts/target/ti_tms570.cfg
 openocd-esp32/share/openocd/scripts/target/ti_tms570lc43xx.cfg
+openocd-esp32/share/openocd/scripts/target/ti_tms570ls1x.cfg
 openocd-esp32/share/openocd/scripts/target/ti_tms570ls20xxx.cfg
 openocd-esp32/share/openocd/scripts/target/ti_tms570ls3137.cfg
 openocd-esp32/share/openocd/scripts/target/tmpa900.cfg
@@ -1035,5 +1064,4 @@ openocd-esp32/share/openocd/scripts/test/syntax1.cfg
 openocd-esp32/share/openocd/scripts/tools/firmware-recovery.tcl
 openocd-esp32/share/openocd/scripts/tools/memtest.tcl
 openocd-esp32/share/openocd/scripts/tools/test_cpu_speed.tcl
-%%DOCSDIR%%/espressif.md
 share/man/man1/openocd-esp32.1.gz

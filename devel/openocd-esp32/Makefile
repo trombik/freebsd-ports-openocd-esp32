@@ -1,5 +1,5 @@
 PORTNAME=	openocd-esp32
-PORTVERSION=	20241016
+PORTVERSION=	${OPENOCD_VERSION}.${ESPRESSIF_VERSION}
 CATEGORIES=	devel
 
 MAINTAINER=	y@trombik.org
@@ -8,15 +8,18 @@ COMMENT=	Open On-Chip Debugger for ESP32
 LICENSE=	GPLv2
 
 LIB_DEPENDS=	libftdi1.so:devel/libftdi1 \
-	libhidapi.so:comms/hidapi
+	libhidapi.so:comms/hidapi \
+	libjim.so:lang/jimtcl
 
 USES=		gmake libtool makeinfo pkgconfig autoreconf:build
 USE_GITHUB=	yes
 USE_GITLAB=	yes
 OPENOCD_VERSION=	0.12.0
+ESPRESSIF_VERSION=	20250707
+OCDESP_JIMTCL_GITREF=	f160866
 GH_TUPLE=	\
 	msteveb:jimtcl:${OCDESP_JIMTCL_GITREF}:jimtcl_group/jimtcl \
-	espressif:openocd-esp32:v${OPENOCD_VERSION}-esp32-${PORTVERSION}
+	espressif:openocd-esp32:v${OPENOCD_VERSION}-esp32-${ESPRESSIF_VERSION}
 
 # XXX undocumented feature, `nodefault`, in bsd.sites.mk
 USE_GITLAB=	nodefault
@@ -34,7 +37,6 @@ OCDESP_CONFIGURE_ARGS+=	--enable-internal-libjaylink
 CONFIGURE_ARGS=	\
 				${OCDESP_CONFIGURE_ARGS} \
 				--disable-werror
-OCDESP_JIMTCL_GITREF=	f160866
 
 # see openocd-esp32/.gitmodules.
 # XXX commit ref in GL_TUPLE must be full ref, not short one
